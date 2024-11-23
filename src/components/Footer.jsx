@@ -3,7 +3,7 @@ function Footer() {
     return (
         <>
             <div className="footer w-screen h-auto px-12 pt-14">
-                <div className="footer-links border-4 grid grid-cols-3">
+                <div className="footer-links grid grid-cols-3">
                     <div className="flex flex-col items-center">
     
                         <ul>

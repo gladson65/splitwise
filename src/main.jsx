@@ -13,11 +13,11 @@ const Group = lazy(()=> import("./components/Group.jsx"));
 
 const appRouter = createBrowserRouter([
   {
-    path: "/splitwise",
+    path: "/",
     element: <App />,
     children: [
       {
-        path: "/splitwise",
+        path: "/",
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
             <Home />
