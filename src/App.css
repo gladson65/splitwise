@@ -1,0 +1,101 @@
+ 
+ /* logo styling */
+ #logo {
+    width: 140px;
+    height: 40px;
+ }
+
+ /* sign up button */
+ #signup {
+    background-color: #1CC29F;
+ }
+
+ /* login button */
+ #login {
+    color: #1CC29F;
+ }
+
+ /* style main section */
+ .main {
+   background-image: url("/facets.png");
+   height: 600px;
+ }
+
+ .about {
+   height: auto;
+ }
+ .about div {
+   height: auto;
+ }
+ .track {
+   background-image: url("/facets2.png");
+   background-color: #373B3F;
+ }
+ .organize {
+   background-image: url("/facets2.png");
+   background-color: #1CC29F;
+ }
+
+ .addExpense {
+   background-image: url("/facets2.png");
+   background-color: #F67240;
+ }
+ .pay {
+   background-image: url("/facets2.png");
+   background-color: #373B3F;
+ }
+
+.pro {
+  background-color: #8656CD;
+  background-image: url("/facets2.png");
+}
+
+/* features section style */
+.features-lists ul {
+  margin: 0px auto;
+}
+
+.features-lists ul li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 20px;
+}
+
+.features-box {
+  height: 200px;
+  border: 2px solid black;
+}
+
+/* lists style none */
+li {
+  list-style: none;
+}
+
+/* footer styling */
+.footer-links ul li {
+  padding-bottom: 4px;
+}
+
+/* login page style */
+.login {
+  background-image: url("/facets.png");
+}
+
+/* signup page style */
+.signup-btn {
+  background-color: #ff652f;
+  font-size: 24px;
+}
+
+
+/* welcome button style */
+.add {
+  font-size: 7px;
+}
+
+/* group section style */
+.cross {
+  font-size: 10px;
+}
