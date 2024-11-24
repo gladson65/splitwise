@@ -53,16 +53,16 @@ function Dashboard() {
 
     useEffect(()=> {
 
-        setTimeout(()=> {
-            setGroups(groupData);
-            setGroupMembers(members)
-            setExpenses(expenseDetails);
-            setGroupIndex(groups.length - 1);
-            setMemberIndex(members.length - 1);
-            setSharingMember(members);
-            console.log(members)
-            console.log(expenseDetails)
-        }, 1000)
+        
+        setGroups(groupData);
+        setGroupMembers(members)
+        setExpenses(expenseDetails);
+        setGroupIndex(groups.length - 1);
+        setMemberIndex(members.length - 1);
+        setSharingMember(members);
+        console.log(members)
+        console.log(expenseDetails)
+        
         
     }, [groups, expenses, members, expenseDetails])
 

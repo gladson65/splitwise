@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function ExpenseForm(props) {
 
     const groupName = props.data;
-    const members = [props.members];
+    const members = props.members;
 
     // dispatch an action
     const dispatch = useDispatch();
@@ -63,13 +63,12 @@ function ExpenseForm(props) {
         setYear(year);
 
         // calculation
-        setTimeout(()=> {
-            let persons = members.length+1;
-            let devide = Math.floor(amount / persons);
-            let lent = Math.floor(amount - devide);
-            setDevideMoney(devide);
-            setYouLent(lent);
-        },1000)
+        let persons = members.length+1;
+        let devide = Math.floor(amount / persons);
+        let lent = Math.floor(amount - devide);
+        setDevideMoney(devide);
+        setYouLent(lent);
+        
         
     }, [month, amount]);
 
