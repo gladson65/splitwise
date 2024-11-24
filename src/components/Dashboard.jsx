@@ -69,7 +69,7 @@ function Dashboard() {
 
     return (
         <>
-            <div className={`dashboard-page w-screen h-screen flex justify-center lg:px-60 gap-3 ${toggleExpense ? "opacity-25": '' }`}>
+            <div className={`dashboard-page w-screen h-screen flex justify-center lg:px-60 gap-3 ${toggleExpense ? "opacity-25": '' } ${toggleSettle ? "opacity-25":''}`}>
                 <div className="leftmenu w-1/5">
                     <div>
                         <h1 className="flex items-start gap-2 pt-2 mb-2">
