@@ -11,6 +11,7 @@
 ### features:
     - First you have to sign in to go to the dashboard.
     - Sign Manually.
+    - Then go to the dashboard by clicking 'skip for now' button
     - Then add group and members by clicking on group +add button in left side bar.
     - Then Add expense and hit save or cancel by clicking cross sign on expense form.
     - You can delete expense by clicking red cross on every expense box.
