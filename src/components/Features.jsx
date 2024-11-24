@@ -182,7 +182,7 @@ function Features() {
                 <div className="features-div w-screen h-auto px-12 mt-20">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-12 md:p-4">
                         
-                        <div className="features-box shadow-2xl drop-shadow-[0px_10px_10px_black]
+                        <div className="features-box shadow-2xl drop-shadow-[0px_5px_5px_black] transition-all duration-300
                             transition-all duration-300 hover:shadow-sm p-7 flex flex-col gap-12">
                             
                             <p className="overflow-y-hidden">
@@ -196,7 +196,7 @@ function Features() {
                             </div>
                         </div>
 
-                        <div className="features-box shadow-2xl drop-shadow-[0px_10px_10px_black]
+                        <div className="features-box shadow-2xl drop-shadow-[0px_5px_5px_black] transition-all duration-300
                             transition-all duration-300 hover:shadow-sm p-7 flex flex-col gap-12">
                             
                             <p className="overflow-y-hidden">
@@ -210,7 +210,7 @@ function Features() {
                             </div>
                         </div>
 
-                        <div className="features-box shadow-2xl drop-shadow-[0px_10px_10px_black]
+                        <div className="features-box shadow-2xl drop-shadow-[0px_5px_5px_black] transition-all duration-300
                             transition-all duration-300 hover:shadow-sm p-7 flex flex-col gap-12">
                             
                             <p className="overflow-y-hidden">
@@ -224,7 +224,7 @@ function Features() {
                             </div>
                         </div>
 
-                        <div className="features-box shadow-2xl drop-shadow-[0px_10px_10px_black]
+                        <div className="features-box shadow-2xl drop-shadow-[0px_5px_5px_black] transition-all duration-300
                             transition-all duration-300 hover:shadow-sm p-7 flex flex-col gap-12">
                             
                             <p className="overflow-y-hidden">
@@ -238,7 +238,7 @@ function Features() {
                             </div>
                         </div>
 
-                        <div className="features-box shadow-2xl drop-shadow-[0px_10px_10px_black]
+                        <div className="features-box shadow-2xl drop-shadow-[0px_5px_5px_black] transition-all duration-300
                             transition-all duration-300 hover:shadow-sm p-7 flex flex-col gap-12">
                             
                             <p className="overflow-y-hidden">
@@ -252,7 +252,7 @@ function Features() {
                             </div>
                         </div>
 
-                        <div className="features-box shadow-2xl drop-shadow-[0px_10px_10px_black]
+                        <div className="features-box shadow-2xl drop-shadow-[0px_5px_5px_black] transition-all duration-300
                             transition-all duration-300 hover:shadow-sm p-7 flex flex-col gap-12">
                             
                             <p className="overflow-y-hidden">

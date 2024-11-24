@@ -22,7 +22,7 @@ function About() {
                         <h1 className="py-1 text-2xl text-center text-white">
                             Organize expenses
                         </h1>
-                        <p className="py-1 px-2 text-center text-white">
+                        <p className="py-3 lg:py-1 px-2 text-center text-white">
                             Split expenses with any group: trips, housemates, friends, and family.
                         </p>
                         <img src="/organize.png" className="pt-4"/>

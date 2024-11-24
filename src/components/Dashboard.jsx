@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import Expense from "./Expense";
 import ExpenseForm from "./ExpenseForm";
 import ExpenseCard from "./ExpenseCard";
+import SettleUp from "./SettleUp";
 
 
 function Dashboard() {
@@ -14,6 +15,7 @@ function Dashboard() {
     const [ groupIndex, setGroupIndex ] = useState();
     const [ memberIndex, setMemberIndex ] = useState()
     const [ toggleExpense, setToggleExpense ] = useState(false);
+    const [ toggleSettle, setToggleSettle ] = useState(false);
     const [ expenses, setExpenses ] = useState([]);
     const [ sharingMember, setSharingMember ] = useState([])
     const [ devide, setDevide ] = useState();
@@ -39,7 +41,12 @@ function Dashboard() {
 
     // add expense function
     function addExpense() {
-        setToggleExpense(!toggleExpense)
+        setToggleExpense(!toggleExpense);
+    }
+
+    // function for toggle settle up form
+    function settleUpToggle() {
+        setToggleSettle(!toggleSettle);
     }
 
 
@@ -187,7 +194,7 @@ function Dashboard() {
                             <button onClick={addExpense} className="bg-orange-500 text-white text-sm py-2 px-2 rounded-lg hover:bg-orange-600">
                                 Add an expense
                             </button>
-                            <button className="bg-teal-400 text-white text-sm py-2 px-2 rounded-lg hover:bg-teal-500">
+                            <button onClick={settleUpToggle} className="bg-teal-400 text-white text-sm py-2 px-2 rounded-lg hover:bg-teal-500">
                                 Settle up
                             </button>
                         </div>
@@ -328,6 +335,11 @@ function Dashboard() {
             {
                 toggleExpense &&
                 <ExpenseForm data={groups[groupIndex]} setToggleExpense={setToggleExpense} members={members[groupIndex]}/>
+            }
+
+            {
+                toggleSettle &&
+                <SettleUp setToggleSettle={setToggleSettle}/>
             }
         </>
     )
