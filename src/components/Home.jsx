@@ -32,7 +32,7 @@ function Home() {
                 :
 
                 <>
-                    <Landing />
+                    <Landing toggleContent={toggleContent}/>
                     <About />
                     <Features />
                     <Footer />    

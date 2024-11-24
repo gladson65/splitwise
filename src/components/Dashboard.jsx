@@ -13,7 +13,7 @@ function Dashboard() {
     const [ groups, setGroups ] = useState([]);
     const [ groupMembers, setGroupMembers ] = useState([]);
     const [ groupIndex, setGroupIndex ] = useState();
-    const [ memberIndex, setMemberIndex ] = useState()
+    const [ memberIndex, setMemberIndex ] = useState();
     const [ toggleExpense, setToggleExpense ] = useState(false);
     const [ toggleSettle, setToggleSettle ] = useState(false);
     const [ expenses, setExpenses ] = useState([]);
@@ -53,14 +53,17 @@ function Dashboard() {
 
     useEffect(()=> {
 
-        setGroups(groupData);
-        setGroupMembers(members)
-        setExpenses(expenseDetails);
-        setGroupIndex(groups.length - 1);
-        setMemberIndex(members.length - 1);
-        setSharingMember(members);
-        console.log(members)
-        console.log(expenseDetails)
+        setTimeout(()=> {
+            setGroups(groupData);
+            setGroupMembers(members)
+            setExpenses(expenseDetails);
+            setGroupIndex(groups.length - 1);
+            setMemberIndex(members.length - 1);
+            setSharingMember(members);
+            console.log(members)
+            console.log(expenseDetails)
+        }, 1000)
+        
     }, [groups, expenses, members, expenseDetails])
 
 
@@ -207,7 +210,7 @@ function Dashboard() {
                                 <p>{month} {year}</p>
                                 <p className="text-sm text-blue-400">view printable summary</p>
                             </div>
-                            <div className="dash-conten h-auto flex flex-col gap-2">
+                            <div className="dash-content h-auto flex flex-col gap-2">
                                 {
                                     expenseDetails.map((item, i) => {
                                         return <ExpenseCard key={i} id={i} data={item} setDevide={setDevide} setYear={setYear} setMonth={setMonth}/>
@@ -288,10 +291,11 @@ function Dashboard() {
                         <div className="flex flex-col h-auto gap-4 pb-2 mb-7 mt-7">
                             {
                                     sharingMember ?
-                                    sharingMember.map((member) => {
+                                    sharingMember.map((member, i) => {
                                         
                                         return(
                                         <>
+                                        <div key={i}>
                                             <div className="flex items-center gap-3 hover:bg-gray-200 cursor-pointer p-1">
                                                 <img src="/member-logo.png" className="rounded-full w-10"/>
                                                 <div>
@@ -313,6 +317,7 @@ function Dashboard() {
                                                     <p style={{fontSize: '11px'}}>Owes: <span className="text-red-500 text-sm">{devide}</span></p>
                                                 </div>
                                             </div>
+                                        </div>
                                         </>  
                                         )
                                     })
