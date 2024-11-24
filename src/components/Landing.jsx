@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "../App.css";
 
-function Landing(props) {
+function Landing() {
 
     // state for text
     const [ text, setText ] = useState("");
@@ -21,16 +21,11 @@ function Landing(props) {
 
         // fade in
         setTimeout(()=> {
-            if (props.toggleContent == false) {
-                document.querySelector("#img").style.opacity = 1;
-            }
-            
+            document.querySelector("#img").style.opacity = 1;
         }, 500)
         // fade out
         setTimeout(()=> {
-            if (props.toggleContent == false) {
-                document.querySelector("#img").style.opacity = 0;
-            }
+            document.querySelector("#img").style.opacity = 0;
         }, 15500)
     
         let timerId = setInterval(()=> {
