@@ -10,7 +10,7 @@ function Welcome() {
     const [ toggle, setToggle ] = useState(false);
 
     // get info from redux store
-    const groupData = useSelector((store) => store.group.groups);
+    const groupData = [useSelector((store) => store.group.groups)];
 
 
     function redirect() {
