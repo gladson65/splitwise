@@ -11,11 +11,7 @@ function Home() {
 
     // get item from local storage
     let name = localStorage.getItem("name");
-    // let nameLength;
-    // if (name) {
-    //     nameLength = name.length;
-    // }
-     
+    let nameLength = name.length;
 
 
     useEffect(()=> {
@@ -26,7 +22,7 @@ function Home() {
         else {
             setToggleContent(false);
         }
-    }, [name])
+    }, [nameLength])
 
     return (
         <>
