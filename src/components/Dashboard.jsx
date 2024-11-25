@@ -69,13 +69,13 @@ function Dashboard() {
 
     return (
         <>
-            <div className={`dashboard-page w-screen h-screen flex justify-center lg:px-60 gap-3 ${toggleExpense ? "opacity-25": '' } ${toggleSettle ? "opacity-25":''}`}>
+            <div className={`dashboard-page w-screen h-screen flex justify-around lg:justify-center lg:px-60 gap-3 ${toggleExpense ? "opacity-25": '' } ${toggleSettle ? "opacity-25":''}`}>
                 <div className="leftmenu w-1/5">
                     <div>
                         <h1 className="flex items-start gap-2 pt-2 mb-2">
                             <span className="bg-teal-400 w-2 h-full"><span className="text-teal-400">_</span></span>
                             <img src="https://assets.splitwise.com/assets/core/logo-square-65a6124237868b1d2ce2f5db2ab0b7c777e2348b797626816400534116ae22d7.svg" 
-                                className="w-5"/>
+                                className="w-5 hidden md:block"/>
                                 
                             Dashboard
                         </h1>
@@ -163,8 +163,8 @@ function Dashboard() {
 
                     <div className="border-2 mt-4">
                         <h1 className="bg-teal-400 text-white border-2">Invite friends</h1>
-                        <input type="email" className="py-1 w-11/12 ml-2 mt-1 px-2 border-2" placeholder="enter an email"/>
-                        <button className="w-1/2 bg-gray-200 text-sm px-1 py-2 mt-2 ml-2 rounded-lg mb-1 hover:bg-gray-300">
+                        <input type="email" className="py-1 md:w-11/12 md:ml-2 mt-1 px-2 border-2" placeholder="enter an email"/>
+                        <button className="md:w-1/2 bg-gray-200 text-sm px-1 py-2 mt-2 ml-2 rounded-lg mb-1 hover:bg-gray-300">
                             Send invite
                         </button>
                     </div>
@@ -179,10 +179,10 @@ function Dashboard() {
                     </div>
                 </div>
 
-                <div className="dashboard-content border-2 w-3/5 shadow-2xl">
+                <div className="dashboard-content border-2 w-3/4 md:w-3/5 shadow-2xl">
 
                     <div className="dash-header bg-gray-200 flex justify-between items-center py-2 px-4">
-                        <h1 className="text-2xl font-bold">
+                        <h1 className="text-lg md:text-2xl font-bold">
                             {
                                 groupData.length > 0 && groupData != undefined ?
                                 groupData[groupIndex]
@@ -194,10 +194,10 @@ function Dashboard() {
                             } 
                         </h1>
                         <div className="flex justify-center items-center gap-2 w-auto px-1">
-                            <button onClick={addExpense} className="bg-orange-500 text-white text-sm py-2 px-2 rounded-lg hover:bg-orange-600">
-                                Add an expense
+                            <button onClick={addExpense} className="bg-orange-500 text-white text-sm py-1 px-1 md:py-2 md:px-2 rounded-lg hover:bg-orange-600">
+                                <span className="hidden md:inline">Add an</span> expense
                             </button>
-                            <button onClick={settleUpToggle} className="bg-teal-400 text-white text-sm py-2 px-2 rounded-lg hover:bg-teal-500">
+                            <button onClick={settleUpToggle} className="bg-teal-400 text-white text-sm py-1 px-1 md:py-2 md:px-2 rounded-lg hover:bg-teal-500">
                                 Settle up
                             </button>
                         </div>
@@ -237,18 +237,18 @@ function Dashboard() {
                                             <img src="/welcome-img.png" width="140px"/>
                                         </div>
                                         <div className="flex flex-col gap-2 py-2 px-2">
-                                            <h1 className="text-3xl py-1 font-bold">
+                                            <h1 className="text-lg md:text-3xl py-1 font-bold">
                                                 Welcome to Splitwise!
                                             </h1>
-                                            <h2 className="text-gray-500 text-lg w-11/12">
+                                            <h2 className="text-gray-500 text-sm md:text-lg w-11/12">
                                                 Splitwise helps you split bills with friends.
                                             </h2>
-                                            <p className="text-gray-500 text-lg w-11/12">
+                                            <p className="text-gray-500 text-sm md:text-lg w-11/12">
                                                 Click “Add an expense” above to get started, or invite some friends first!
                                             </p>
 
                                             <button className="bg-orange-500 text-white text-xl w-3/4 py-2 rounded-lg">
-                                                Add friends on Splitwise
+                                                Add friends <span className="hidden md:inline">on Splitwise</span>
                                             </button>
                                         </div>
                                     </div>
@@ -268,7 +268,7 @@ function Dashboard() {
                     groups.length > 0 &&
                     <>
                     
-                    <div className="rightmenu w-1/5">
+                    <div className="rightmenu w-1/5 hidden lg:block">
                         <div className="flex items-center justify-between mt-2">
                             <span className="border-2 px-1 cursor-pointer">☰</span>
                             <span className="border-2 px-1 cursor-pointer">🗒</span>

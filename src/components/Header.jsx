@@ -51,7 +51,7 @@ function Header() {
                     isSign ?
                     <>
 
-                        <nav className="w-screen h-12 bg-teal-300 flex justify-between items-center px-24 lg:px-40 overflow-hidden">
+                        <nav className="w-screen h-12 bg-teal-300 flex justify-between items-center px-4 md:px-24 lg:px-40 overflow-hidden">
                             <img className='cursor-pointer' id="logo" src="/Splitwise_logo.svg.png"/>
                             <div className="h-16 flex justify-center items-center gap-2 w-auto px-4">
                                 <img src="/user-logo.png" className="rounded-full w-7"/>
@@ -59,7 +59,7 @@ function Header() {
                                 <i onClick={dropdown} className="cursor-pointer">▼</i>
                             </div>
                             
-                            <div className={`dropdown absolute right-40 top-10 bg-white shadow-2xl rounded-lg py-2 z-50
+                            <div className={`dropdown absolute right-4 lg:right-40 top-10 bg-white shadow-2xl rounded-lg py-2 z-50
                                     ${showDrop ? "block" : "hidden"}`}>
                                 <ul className="text-sm flex flex-col gap-1">
                                     <li className="cursor-pointer hover:bg-teal-400">
