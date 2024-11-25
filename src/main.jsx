@@ -17,7 +17,7 @@ const appRouter = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/splitwise",
+        path: "/",
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
             <Home />
