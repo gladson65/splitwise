@@ -94,7 +94,10 @@ function Landing() {
                 
                 {/* for medium and less screen size */}
                 <div className="lg:hidden w-full h-52 px-2 flex flex-col gap-4 items-center text-center">
-                    <button id="signup" className="w-40 lg:hidden text-white px-2 py-4 rounded-lg">Sign up</button>
+                    <button className={`w-40 lg:hidden text-white px-2 py-4 rounded-lg transition-all duration-300
+                        ${count == 0 && 'bg-black'} ${count == 1 && 'bg-green-400 text-black'} ${count == 2 && 'bg-purple-500'} ${count == 3 && 'bg-teal-400 text-black'}`}>
+                        Sign up
+                    </button>
                     <p className="para w-full lg:hidden">Keep track of your shared expenses and balances with housemates, trips, groups, friends, and family.</p>
                     <p className="lg:hidden">Free for  
                         <span> <i className="fa-brands fa-apple"></i> </span> iphone, 
