@@ -4,7 +4,7 @@ import "../App.css"
 function About() {
     return (
         <>
-            <div className="about w-screen grid grid-cols-2">
+            <div className="about w-screen grid lg:grid-cols-2">
                 <div className="track overflow-y-hidden flex justify-center">
                     <div className="w-2/5 h-full flex flex-col items-center pt-8">
                         <h1 className="py-1 text-2xl text-center text-white">
