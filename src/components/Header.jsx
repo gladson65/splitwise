@@ -11,7 +11,7 @@ function Header() {
 
     // get item from local storage
     let name = localStorage.getItem("name");
-    let nameLength = name.length;
+    
 
     // navigate
     const navigate = useNavigate();
@@ -41,7 +41,7 @@ function Header() {
         else {
             setIsSign(false);
         }
-    }, [nameLength])
+    }, [name])
     
 
     return (
