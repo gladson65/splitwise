@@ -35,12 +35,15 @@ function Signup() {
     }
 
     useEffect(()=> {
-        if (inputText.length > 0) {
-            setShowinput(true);
-        }
-        else {
-            setShowinput(false)
-        }
+        setTimeout(() => {
+            if (inputText.length > 0) {
+                setShowinput(true);
+            }
+            else {
+                setShowinput(false)
+            }
+        }, 1000)
+        
     }, [inputText])
 
 
