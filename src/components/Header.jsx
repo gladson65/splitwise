@@ -86,7 +86,7 @@ function Header() {
                     :
 
                     <>
-                        <nav className="w-screen h-20 bg-white flex justify-between items-center px-24 lg:px-40">
+                        <nav className="w-screen h-20 bg-white flex justify-between items-center px-4 md:px-24 lg:px-40">
                             <img className='cursor-pointer' id="logo" src="Splitwise_logo.svg.png"/>
                             <div className="h-16 flex justify-center items-center gap-2 w-auto px-4">
                                 <Link to="/login">
