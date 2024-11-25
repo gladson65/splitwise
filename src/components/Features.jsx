@@ -8,7 +8,7 @@ function Features() {
                 <h1 className="text-center text-2xl">The Whole nine yards</h1>
 
                 {/* features lists */}
-                <div className="features-lists grid grid-cols-3 mb-4 mt-12">
+                <div className="features-lists grid grid-cols-2 lg:grid-cols-3 mb-4 mt-12 hidden lg:grid">
                     <ul>
                         <li>
                             <i>
@@ -159,6 +159,163 @@ function Features() {
                             <span> Early access to new features</span>
                         </li>
                     </ul>
+                </div>
+
+                {/* features lists for medium and less screen size */}
+                <div className="features-lists grid grid-cols-2 lg:hidden mb-4 mt-12">
+
+                <ul>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Add group and friends</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Split expenses, record debts</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span>Equal or unequal splits</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Split by % or shares</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Calculate total balances</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Simplify debts</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Recurring expenses</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Offline mode</span>
+                        </li>
+
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Cloud sync</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Spending totals</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Categorize expenses</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> 7 + languages</span>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> 100 + currencies</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/core/core-feature.svg"/>
+                            </i>
+                            <span> Payment integration</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span> Unlimited expenses</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span> Transaction import</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span>Currency conversion</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span> Receipt scanning</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span> Itemization</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span> Charts and graphs</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span> Expense search</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span> Save default splits</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span> A totally ad-free expenses</span>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="https://assets.splitwise.com/assets/pro/pro-feature.svg"/>
+                            </i>
+                            <span> Early access to new features</span>
+                        </li>
+                    </ul>
+
                 </div>
 
                 <div className="w-screen flex justify-center items-center">
