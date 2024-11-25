@@ -56,11 +56,11 @@ function About() {
 
             <div className="pro w-screen h-auto flex flex-col lg:flex-row lg:justify-evenly pt-32">
                 <div className="lg:w-2/5 w-full h-60 lg:h-auto flex justify-start items-center text-center relative">
-                    <div className="w-1/2 flex flex-col justify-center items-center gap-4 absolute lg:left-32 left-32 sm:left-40 md:left-52">
+                    <div className="w-full lg:w-1/2 flex flex-col justify-center items-center gap-4 absolute lg:left-32">
                         <h1 className="text-lg lg:text-2xl text-white">
                             Get even more with PRO
                         </h1>
-                        <p className="text-white text-sm lg:text-md">
+                        <p className="text-white text-sm lg:text-md px-4 lg:px-0">
                             Get even more organized with receipt scanning, charts and graphs, currency conversion, and more!
                         </p>
                         <button className="w-40 text-white px-2 py-4 rounded-lg border-2">
