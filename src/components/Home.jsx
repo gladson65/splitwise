@@ -11,10 +11,15 @@ function Home() {
 
     // get item from local storage
     let name = localStorage.getItem("name");
-    let nameLength = name.length;
+    let nameLength;
+    if (name) {
+        nameLength = name.length;
+    }
+     
 
 
     useEffect(()=> {
+        setTimeout
         if (name && name != "null") {
             setToggleContent(true);
         }
