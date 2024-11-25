@@ -41,7 +41,10 @@ function Dashboard() {
 
     // add expense function
     function addExpense() {
-        setToggleExpense(!toggleExpense);
+        if (groups.length > 0) {
+            setToggleExpense(!toggleExpense);
+        }
+        
     }
 
     // function for toggle settle up form

@@ -64,7 +64,7 @@ function Group() {
         <>
             <div className="signup w-screen h-auto pb-14 flex justify-center items-start pt-20 gap-12">
                 
-                <div>
+                <div className="hidden md:block">
                     <img src="https://assets.splitwise.com/assets/core/logo-square-65a6124237868b1d2ce2f5db2ab0b7c777e2348b797626816400534116ae22d7.svg"
                     height="200px" width="200px"/>
                 </div>
