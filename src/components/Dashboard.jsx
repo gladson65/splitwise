@@ -49,7 +49,9 @@ function Dashboard() {
 
     // function for toggle settle up form
     function settleUpToggle() {
-        setToggleSettle(!toggleSettle);
+        if (expenses.length > 0) {
+            setToggleSettle(!toggleSettle);
+        }
     }
 
 
