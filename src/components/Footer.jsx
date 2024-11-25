@@ -2,9 +2,9 @@
 function Footer() {
     return (
         <>
-            <div className="footer w-screen h-auto px-12 pt-14">
-                <div className="footer-links grid grid-cols-3">
-                    <div className="flex flex-col items-center">
+            <div className="footer w-screen h-auto pt-14">
+                <div className="footer-links grid grid-cols-3 px-2 lg:px-0">
+                    <div className="flex flex-col items-center text-sm lg:text-lg">
     
                         <ul>
                             <li className="text-teal-500">
@@ -18,7 +18,7 @@ function Footer() {
                             <li>API</li>
                         </ul>
                     </div>
-                    <div className="flex flex-col items-center justify-center">
+                    <div className="flex flex-col items-center justify-center text-sm lg:text-lg">
                         
                         <ul>
                             <li className="text-orange-600">
@@ -32,7 +32,7 @@ function Footer() {
                             <li>Splitwise Pay</li>
                         </ul>
                     </div>
-                    <div className="flex flex-col items-center justify-center">
+                    <div className="flex flex-col items-center justify-center text-sm lg:text-lg">
                        
                         <ul>
                             <li className="text-slate-700">
@@ -43,9 +43,9 @@ function Footer() {
                             <li>Terms of Service</li>
                             <li>Privacy</li>
                             <li>
-                                <i>Twitter</i>
-                                <i>Facebook</i>
-                                <i>Instagram</i>
+                                <i className="mr-2 cursor-pointer hover:text-teal-500">𝕏</i>
+                                <i className="mr-2 cursor-pointer hover:text-teal-500">ⓕ</i>
+                                <i className="mr-2 cursor-pointer hover:bg-teal-500">🅾</i>
                             </li>
                             <li> -</li>
                         </ul>
