@@ -10,7 +10,7 @@ function About() {
                         <h1 className="py-1 text-2xl text-center text-white">
                             Track balance
                         </h1>
-                        <p className="py-1 px-7 text-center text-white">
+                        <p className="py-1 lg:px-7 px-1 text-center text-white">
                             Keep track of shared expenses, balances, and who owes who.
                         </p>
                         <img src="/track.png" className="pt-4"/>
@@ -34,7 +34,7 @@ function About() {
                         <h1 className="py-1 text-2xl text-center text-white">
                             Add expenses easily
                         </h1>
-                        <p className="py-1 px-7 text-center text-white">
+                        <p className="py-1 lg:px-7 px-1 text-center text-white">
                             Quickly add expenses on the go before you forget who paid.
                         </p>
                         <img src="/addexpense.png" className="pt-4"/>
@@ -46,7 +46,7 @@ function About() {
                         <h1 className="py-1 text-2xl text-center text-white">
                             Pay friends back
                         </h1>
-                        <p className="py-1 px-7 text-center text-white">
+                        <p className="py-1 lg:px-7 px-1 text-center text-white">
                             Settle up with a friend and record any cash or online payment.
                         </p>
                         <img src="/pay.png" className="pt-4"/>

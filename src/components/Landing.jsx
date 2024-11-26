@@ -51,7 +51,7 @@ function Landing() {
     return(
         <>
             {/* landing page section */}
-            <main className="main w-screen flex lg:flex-row justify-center items-center lg:gap-32 px-7 py-8 
+            <main className="main w-screen flex lg:flex-row justify-center items-center lg:gap-32 px-7 pt-8 
                     flex-col gap-2">
                 <div className="w-full lg:w-1/2 flex flex-col items-center lg:gap-4 gap-4 text-center">
                     <h1 className="w-full text-3xl lg:text-4xl lg:w-1/2 py-1 overflow-hidden">Less stress when sharing expenses</h1>
@@ -59,8 +59,8 @@ function Landing() {
                         ${count == 1 && 'text-purple-500'} ${count == 2 && 'text-red-500'} ${count == 3 && 'text-teal-300'} overflow-hidden`}>
                         {texts[count]}.
                     </h1>
-                    <div className="w-auto px-2 py-2 h-22 overflow-hidden">
-                        <ul className="w-full flex justify-evenly items-center gap-7 py-1 overflow-hidden">
+                    <div className="w-9/12 lg:w-auto px-2 py-2 h-22 overflow-hidden">
+                        <ul className="w-full h-full flex justify-evenly items-center gap-7 py-1 overflow-hidden">
                             <li className={`${count == 0 && 'bg-black rounded-full'} p-2 transition-all delay-150 duration-700`}>
                                 <img src="flight.png" className={`w-10`}/>
                             </li>
@@ -88,12 +88,14 @@ function Landing() {
                     <img id="img" className="transition-all duration-300" src={iconUrl[count]} width="400px" height="400px"/>
                 </div>
                 {/* for medium and less screen size */}
-                <div className="w-1/2 justify-center h-82 py-2 lg:hidden overflow-hidden">
-                    <img id="img" className="transition-all duration-300" src={iconUrl[count]} width="400px" height="400px"/>
+                <div className="w-full lg:w-1/2 overflow-hidden flex justify-center items-center h-82 p-4 lg:hidden overflow-hidden">
+                    <div className="w-full h-82 flex justify-center items-center">
+                        <img id="img" className="transition-all duration-300" src={iconUrl[count]} width="400px"/>
+                    </div>
                 </div>
                 
                 {/* for medium and less screen size */}
-                <div className="lg:hidden w-full h-52 px-2 flex flex-col gap-4 items-center text-center">
+                <div className="lg:hidden w-full h-52 px-2 flex flex-col gap-4 items-center text-center mt-7">
                     <button className={`w-40 lg:hidden text-white px-2 py-4 rounded-lg transition-all duration-300
                         ${count == 0 && 'bg-black'} ${count == 1 && 'bg-green-400 text-black'} ${count == 2 && 'bg-purple-500'} ${count == 3 && 'bg-teal-400 text-black'}`}>
                         Sign up
