@@ -12,6 +12,7 @@ function Group() {
     const [ one, setOne ] = useState("");
     const [ two, setTwo ] = useState("");
     const [ three, setThree ] = useState("");
+    const [ isLoading, setIsLoading ] = useState();
 
     let length = group.length;
 
@@ -34,9 +35,11 @@ function Group() {
         three.length > 0 ? mem.push(three) : '';
 
         if (group.length > 0) {
+            setIsLoading(true);
             // store group in redux store
             dispatch(addGroup(group)); 
             setTimeout(()=> {
+                setIsLoading(false);
                 navigate("/dashboard")
             }, 1000)  
         }
@@ -141,7 +144,8 @@ function Group() {
                     
 
                     <div className="w-full flex justify-start items-center py-1 gap-7 transition-all duration-300">
-                        <button onClick={createGroup} className="signup-btn w-32 py-1 px-1 rounded-lg text-white hover:bg-cyan-500 transition-all duation-150">
+                        <button onClick={createGroup} className={`signup-btn w-32 py-1 px-1 rounded-lg text-white hover:bg-cyan-500 transition-all duation-150
+                                ${isLoading && 'cursor-wait'}`}>
                             Save
                         </button>
                     </div>

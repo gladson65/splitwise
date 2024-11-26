@@ -18,6 +18,7 @@ function ExpenseForm(props) {
     const [ amount, setAmount ] = useState(0);
     const [ devideMoney, setDevideMoney ] = useState(0.00);
     const [ youLent, setYouLent ] = useState(0);
+    const [ isLoading, setIsLoading ] = useState()
 
     
     // data state
@@ -32,6 +33,8 @@ function ExpenseForm(props) {
 
     // save expense function
     function saveExpense() {
+        setIsLoading(true);
+
         const data = [{
             groupName: groupName,
             members: members,
@@ -46,6 +49,7 @@ function ExpenseForm(props) {
         dispatch(addExpense(data));
 
         setTimeout(()=> {
+            setIsLoading(false);
             props.setToggleExpense(false);
         }, 2000)
     }
@@ -121,10 +125,11 @@ function ExpenseForm(props) {
                     </div>
 
                     <div className="py-1 flex justify-end items-center gap-2 pr-2 mt-4">
-                        <button className="py-2 w-20 bg-gray-200 hover:bg-gray-300 rounded-md">
+                        <button onClick={cancelPage} className="py-2 w-20 bg-gray-200 hover:bg-gray-300 rounded-md">
                             Cancel
                         </button>
-                        <button onClick={saveExpense} className="py-2 w-20 bg-teal-400 hover:bg-teal-600 text-white rounded-md">
+                        <button onClick={saveExpense} className={`py-2 w-20 bg-teal-400 hover:bg-teal-600 text-white rounded-md
+                                ${isLoading && 'cursor-wait'}`}>
                             Save
                         </button>
                     </div>

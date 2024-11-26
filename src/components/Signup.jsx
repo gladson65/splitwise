@@ -11,18 +11,21 @@ function Signup() {
     const [ password, setPassword ] = useState("");
     const [ error, setError ] = useState("")
     const [ showInput, setShowinput ] = useState(false);
+    const [ isLoading, setIsLoading ] = useState();
 
     // navigate
     const navigate = useNavigate();
 
     function signFunc() {
         if (inputText != "" && email != "" && password != "") {
+            setIsLoading(true);
             localStorage.setItem("name", `${inputText}`);
             localStorage.setItem("email", `${email}`);
             localStorage.setItem("password", `${password}`);
 
             // navigate to dashboard page
             setTimeout(()=> {
+                setIsLoading(false);
                 navigate("/dashboard")
             }, 2000)
         }
@@ -91,7 +94,8 @@ function Signup() {
                     
 
                     <div className="mt-4 w-full flex justify-start items-center py-1 gap-7 transition-all duration-300">
-                        <button onClick={signFunc} className="signup-btn py-3 px-2 rounded-lg text-white hover:bg-cyan-500 transition-all duation-150">
+                        <button onClick={signFunc} className={`signup-btn py-3 px-2 rounded-lg text-white hover:bg-cyan-500 transition-all duation-150 
+                                ${isLoading ? 'cursor-wait': ''}`}>
                             Sign me up!
                         </button>
                         <span>or</span>
