@@ -30,13 +30,28 @@ function Dashboard() {
     const members = useSelector((store) => store.group.members);
     const expenseDetails = useSelector((store) => store.group.expense);
 
+    let index;
     // select group function
     function selectGroup(e) {
         let select = e.target.innerText;
         let group = select.split(" ")        
-        let index = groups.indexOf(group[1])
+        index = groups.indexOf(group[1])
         setMemberIndex(index);
         setGroupIndex(index);
+
+        expenseDetails.forEach(element => {
+            if (groups[index] == element[0].groupName) {
+                setExpenses(element);
+                console.log(element);
+            }
+            
+        });
+       
+        console.log(groups[index]);
+        
+        
+        
+        
     }
 
     // add expense function
@@ -58,15 +73,23 @@ function Dashboard() {
 
     useEffect(()=> {
 
+
         
         setGroups(groupData);
         setGroupMembers(members)
-        setExpenses(expenseDetails);
         setGroupIndex(groups.length - 1);
         setMemberIndex(members.length - 1);
         setSharingMember(members);
-        console.log(members)
-        console.log(expenseDetails)
+
+        expenseDetails.forEach(element => {
+            if (groups[index] == element[0].groupName) {
+                setExpenses(element);
+            }
+            
+        });
+
+        // console.log(members)
+        console.log("expense details", expenseDetails)
         
         
     }, [groups, expenses, members, expenseDetails])
@@ -218,7 +241,7 @@ function Dashboard() {
                             <div className="dash-content h-auto flex flex-col gap-2">
                                 {
                                     expenseDetails.map((item, i) => {
-                                        return <ExpenseCard key={i} id={i} data={item} setDevide={setDevide} setYear={setYear} setMonth={setMonth}/>
+                                        return <ExpenseCard key={i} id={i} groupIndex={groupIndex} data={item} setDevide={setDevide} setYear={setYear} setMonth={setMonth}/>
                                     })
                                 }
                             </div>
@@ -344,7 +367,7 @@ function Dashboard() {
             </div>
             {
                 toggleExpense &&
-                <ExpenseForm data={groups[groupIndex]} setToggleExpense={setToggleExpense} members={members[groupIndex]}/>
+                <ExpenseForm data={groups[groupIndex]} id={groupIndex} setToggleExpense={setToggleExpense} members={members[groupIndex]}/>
             }
 
             {

@@ -7,6 +7,7 @@ function ExpenseForm(props) {
 
     const groupName = props.data;
     const members = props.members;
+    const id = props.id;
 
     // dispatch an action
     const dispatch = useDispatch();
@@ -36,6 +37,7 @@ function ExpenseForm(props) {
         setIsLoading(true);
 
         const data = [{
+            id: id,
             groupName: groupName,
             members: members,
             description: description,
