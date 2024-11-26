@@ -79,8 +79,7 @@ function Dashboard() {
         setGroupMembers(members)
         setGroupIndex(groups.length - 1);
         setMemberIndex(members.length - 1);
-        setSharingMember(members);
-
+        setSharingMember(groupMembers[memberIndex])
         expenseDetails.forEach(element => {
             if (groups[index] == element[0].groupName) {
                 setExpenses(element);
@@ -88,11 +87,11 @@ function Dashboard() {
             
         });
 
-        // console.log(members)
+        console.log('members', groupMembers[memberIndex])
         console.log("expense details", expenseDetails)
         
         
-    }, [groups, expenses, members, expenseDetails])
+    }, [groups, expenses, members, expenseDetails, index])
 
 
     return (
@@ -318,7 +317,7 @@ function Dashboard() {
 
                         <div className="flex flex-col h-auto gap-4 pb-2 mb-7 mt-7">
                             {
-                                    sharingMember ?
+                                    sharingMember != undefined && sharingMember.length > 0 ?
                                     sharingMember.map((member, i) => {
                                         
                                         return(
@@ -327,21 +326,7 @@ function Dashboard() {
                                             <div className="flex items-center gap-3 hover:bg-gray-200 cursor-pointer p-1">
                                                 <img src="/member-logo.png" className="rounded-full w-10"/>
                                                 <div>
-                                                    <p>{member[0]}</p>
-                                                    <p style={{fontSize: '11px'}}>Owes: <span className="text-red-500 text-sm">{devide}</span></p>
-                                                </div>
-                                            </div>
-                                            <div className="flex items-center gap-3 hover:bg-gray-200 cursor-pointer p-1">
-                                                <img src="/member-logo.png" className="rounded-full w-10"/>
-                                                <div>
-                                                    <p>{member[1]}</p>
-                                                    <p style={{fontSize: '11px'}}>Owes: <span className="text-red-500 text-sm">{devide}</span></p>
-                                                </div>
-                                            </div>
-                                            <div className="flex items-center gap-3 hover:bg-gray-200 cursor-pointer p-1">
-                                                <img src="/member-logo.png" className="rounded-full w-10"/>
-                                                <div>
-                                                    <p>{member[2]}</p>
+                                                    <p>{member}</p>
                                                     <p style={{fontSize: '11px'}}>Owes: <span className="text-red-500 text-sm">{devide}</span></p>
                                                 </div>
                                             </div>
