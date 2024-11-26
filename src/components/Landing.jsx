@@ -51,11 +51,11 @@ function Landing() {
     return(
         <>
             {/* landing page section */}
-            <main className="main w-screen flex lg:flex-row justify-center items-center lg:gap-32 px-32 py-8 
+            <main className="main w-screen flex lg:flex-row justify-center items-center lg:gap-32 px-7 py-8 
                     flex-col gap-2">
                 <div className="w-full lg:w-1/2 flex flex-col items-center lg:gap-4 gap-4 text-center">
                     <h1 className="w-full text-3xl lg:text-4xl lg:w-1/2 py-1 overflow-hidden">Less stress when sharing expenses</h1>
-                    <h1 className={`text-xl lg:text-4xl w-full lg:w-auto py-1 transition-all delay-500 duration-700 ${count == 0 && 'text-teal-300'}
+                    <h1 className={`text-xl font-bold lg:font-normal lg:text-4xl w-full lg:w-auto py-1 transition-all delay-500 duration-700 ${count == 0 && 'text-teal-300'}
                         ${count == 1 && 'text-purple-500'} ${count == 2 && 'text-red-500'} ${count == 3 && 'text-teal-300'} overflow-hidden`}>
                         {texts[count]}.
                     </h1>
@@ -78,7 +78,7 @@ function Landing() {
 
                     <p className="w-1/2 hidden lg:block">Keep track of your shared expenses and balances with housemates, trips, groups, friends, and family.</p>
                     <button id="signup" className="w-40 hidden lg:block text-white px-2 py-4 rounded-lg">Sign up</button>
-                    <p className="hidden lg:block">Free for  
+                    <p className="hidden w-full lg:block">Free for  
                         <span> <i className="fa-brands fa-apple"></i> </span> iphone, 
                         <span> <i className="fa-brands fa-android"></i> </span> Android, 
                         and web
@@ -98,7 +98,7 @@ function Landing() {
                         ${count == 0 && 'bg-black'} ${count == 1 && 'bg-green-400 text-black'} ${count == 2 && 'bg-purple-500'} ${count == 3 && 'bg-teal-400 text-black'}`}>
                         Sign up
                     </button>
-                    <p className="para w-full lg:hidden">Keep track of your shared expenses and balances with housemates, trips, groups, friends, and family.</p>
+                    <p className="para lg:hidden">Keep track of your shared expenses and balances with housemates, trips, groups, friends, and family.</p>
                     <p className="lg:hidden">Free for  
                         <span> <i className="fa-brands fa-apple"></i> </span> iphone, 
                         <span> <i className="fa-brands fa-android"></i> </span> Android, 
